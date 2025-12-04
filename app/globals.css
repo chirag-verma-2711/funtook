@@ -3,6 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --pinkd: #FC6E88;
+  --pinkl: #FFE6EB;
+
+}
+
+.font_inter {
+  font-family: 'Inter', sans-serif;
 }
 
 @theme inline {
