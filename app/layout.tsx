@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import Head from "next/head"; // Ensure Head is imported for meta and link tags
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="{`${geistSans?.variable} ${geistMono?.variable} antialiased`}">
+      <Head>
+        {/* Link to Google Fonts for Roboto */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-roboto`}>
         <Header />
         {children}
         <Footer />
