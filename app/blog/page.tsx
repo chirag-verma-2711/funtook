@@ -327,7 +327,7 @@ export default function NewsletterSection() {
           <div>
             <div className="border border-black"></div>
             <SocialIcons />
-            <div className="relative mt-8">
+            {/* <div className="relative mt-8">
               <Image
                 src="/assets/home/birthday.svg"
                 alt="card-img"
@@ -343,16 +343,50 @@ export default function NewsletterSection() {
                   Try Funtook Now
                 </button>
               </div>
+            </div> */}
+
+            <div className="relative mt-8">
+              <Image
+                src="/assets/home/birthday.svg"
+                alt="card-img"
+                width={1000}
+                height={1000}
+                className="w-full h-auto"
+              />
+
+              {/* Overlay */}
+              <div className="absolute top-0 w-full h-full rounded-3xl bg-[#0000009E] flex flex-col items-center justify-center px-4 py-16 sm:px-6 sm:py-24 md:px-10 md:py-32 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-white">
+                  Master Time, Boost Decoration, Achieve More
+                </h2>
+
+                <button className="mt-6 sm:mt-8 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-sm sm:text-base font-medium text-white bg-[linear-gradient(90deg,rgba(252,110,136,1)_53%,rgba(255,6,6,1)_87%)]">
+                  Try Funtook Now
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-[#B189A3] text-center py-[100px] px-0 mt-[100]">
+      {/* <div className="bg-[#B189A3] text-center py-[100px] px-0 mt-[100]">
         <h2 className="text-5xl font-medium"><span className="bg-white rounded-full py-2.5 px-[30px]">
           Maximize Productivity by 30%</span> with FUNTOOK
         </h2>
         <button className="bg-[linear-gradient(90deg,rgba(252,110,136,1)_53%,rgba(255,6,6,1)_87%)] mt-10 px-5 py-2 rounded-xl text-sm font-medium text-white ">
+          Get Started
+        </button>
+      </div> */}
+
+      <div className="bg-[#B189A3] text-center py-20 px-4 sm:py-32 sm:px-6 md:py-40 md:px-10 mt-[100]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium">
+          <span className="bg-white rounded-full py-1.5 sm:py-2.5 px-4 sm:px-8 md:px-[30px]">
+            Maximize Productivity by 30%
+          </span>{" "}
+          with FUNTOOK
+        </h2>
+
+        <button className="bg-[linear-gradient(90deg,rgba(252,110,136,1)_53%,rgba(255,6,6,1)_87%)] mt-6 sm:mt-10 px-4 sm:px-5 py-2 rounded-xl text-sm sm:text-base font-medium text-white">
           Get Started
         </button>
       </div>
