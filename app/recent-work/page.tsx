@@ -327,7 +327,7 @@ export default function recent() {
           <h2 className="text-2xl font-semibold text-[#980A51]">
             Meet Your Decors
           </h2>
-          <p className="text-gray-600 mt-1">Let's Beautify Together</p>
+          <p className="text-gray-600 mt-1">Let&apos;s Beautify Together</p>
 
           {/* Buttons */}
           <div className="flex items-center justify-center gap-4 mt-6">

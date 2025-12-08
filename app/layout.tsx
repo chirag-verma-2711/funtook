@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-// import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import Head from "next/head"; // Ensure Head is imported for meta and link tags
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +15,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Add Roboto using next/font
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-roboto",
+});
+
 export const metadata: Metadata = {
   title: "Funtook",
   description: "Funtook",
@@ -23,19 +29,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <Head>
-        {/* Link to Google Fonts for Roboto */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-roboto`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}
+      >
         <Header />
         {children}
         <Footer />
