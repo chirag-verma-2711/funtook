@@ -9,14 +9,14 @@ export default function recent() {
       </h2>
       <div className="flex gap-8 overflow-x-auto justify-center mb-10">
         <div className="flex flex-col items-center">
-          <img src="/images/Group 42.svg" className="w-30 h-30 rounded-full" />
+          <img src="/images/Group 42.svg" className="w-30 rounded-full" />
           <span>All</span>
         </div>
 
         <div className="flex flex-col items-center">
           <img
             src="/images/Ellipse 35.svg"
-            className="w-30 h-30 rounded-full"
+            className="w-30 rounded-full"
           />
           <span>Kids Birthday</span>
         </div>
@@ -24,7 +24,7 @@ export default function recent() {
         <div className="flex flex-col items-center">
           <img
             src="/images/Ellipse 35 (1).svg"
-            className="w-30 h-30 rounded-full"
+            className="w-30 rounded-full"
           />
           <span>Office Decoration</span>
         </div>
@@ -32,7 +32,7 @@ export default function recent() {
         <div className="flex flex-col items-center">
           <img
             src="/images/Group 42 (1).svg"
-            className="w-30 h-30 rounded-full"
+            className="w-30 rounded-full"
           />
           <span>Anniversary</span>
         </div>
@@ -40,14 +40,14 @@ export default function recent() {
         <div className="flex flex-col items-center">
           <img
             src="/images/Group 42 (2).svg"
-            className="w-30 h-30 rounded-full"
+            className="w-30 rounded-full"
           />
           <span>Baby Welcome</span>
         </div>
         <div className="flex flex-col items-center">
           <img
             src="/images/Ellipse 35 (1).svg"
-            className="w-30 h-30 rounded-full"
+            className="w-30 rounded-full"
           />
           <span>Office Decoration</span>
         </div>
