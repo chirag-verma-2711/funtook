@@ -3,76 +3,15 @@
 import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 export default function SocialIcons() {
-    //   const iconClasses =
-    //     "text-white bg-gray-800 hover:bg-pink-500 transition-colors rounded-full p-3 w-10 h-10 flex items-center justify-center";
 
     return (
-        // <div className="flex flex-col items-center">
-        //     <h2 className="text-4xl my-6">STAY IN TOUCH</h2>
-
-        //     <div className="flex flex-col gap-8">
-        //         {/* Row 1 */}
-        //         <div className="flex flex-row items-center justify-center gap-20">
-        //         <div className="flex items-center gap-2.5">
-        //             <a
-        //             href="https://facebook.com"
-        //             target="_blank"
-        //             rel="noopener noreferrer"
-        //             className="text-3xl text-white bg-[#1877F2] hover:bg-pink-500 transition-colors rounded-full flex justify-center items-center p-2.5"
-        //             >
-        //             <FaFacebookF />
-        //             </a>
-        //             <h2 className="text-base font-medium">FACEBOOK</h2>
-        //         </div>
-
-        //         <div className="flex items-center gap-2.5">
-        //             <a
-        //             href="https://instagram.com"
-        //             target="_blank"
-        //             rel="noopener noreferrer"
-        //             className="text-3xl text-white bg-[#EC7494] hover:bg-pink-500 transition-colors rounded-full flex justify-center items-center p-2.5"
-        //             >
-        //             <FaInstagram />
-        //             </a>
-        //             <h2 className="text-base font-medium">INSTAGRAM</h2>
-        //         </div>
-        //         </div>
-
-        //         {/* Row 2 */}
-        //         <div className="flex flex-row items-center justify-center gap-20">
-        //         <div className="flex items-center gap-2.5">
-        //             <a
-        //             href="https://twitter.com"
-        //             target="_blank"
-        //             rel="noopener noreferrer"
-        //             className="text-3xl text-white bg-[#1E1E1E] hover:bg-pink-500 transition-colors rounded-full flex justify-center items-center p-2.5"
-        //             >
-        //             <FaTwitter />
-        //             </a>
-        //             <h2 className="text-base font-medium">TWITTER</h2>
-        //         </div>
-
-        //         <div className="flex items-center gap-2.5">
-        //             <a
-        //             href="https://linkedin.com"
-        //             target="_blank"
-        //             rel="noopener noreferrer"
-        //             className="text-3xl text-white bg-[#709DFF] hover:bg-pink-500 transition-colors rounded-full flex justify-center items-center p-2.5"
-        //             >
-        //             <FaLinkedinIn />
-        //             </a>
-        //             <h2 className="text-base font-medium">LINKEDIN</h2>
-        //         </div>
-        //         </div>
-        //     </div>
-        // </div>
 
         <div className="flex flex-col items-center px-4 sm:px-6 md:px-10">
             <h2 className="text-3xl sm:text-4xl md:text-5xl my-6 text-center">STAY IN TOUCH</h2>
 
             <div className="flex flex-col gap-6 sm:gap-8">
                 {/* Row 1 */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-20">
+                <div className="flex flex-row items-center justify-center gap-8 sm:gap-20">
                     <div className="flex items-center gap-2.5">
                         <a
                             href="https://facebook.com"
@@ -99,7 +38,7 @@ export default function SocialIcons() {
                 </div>
 
                 {/* Row 2 */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-20">
+                <div className="flex flex-row items-center justify-center gap-8 sm:gap-20">
                     <div className="flex items-center gap-2.5">
                         <a
                             href="https://twitter.com"
