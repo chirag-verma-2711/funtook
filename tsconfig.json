@@ -36,7 +36,7 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "types/**/*.d.ts" // Added this line for custom types like swiper.d.ts
-  ],
+, "app/components/DeliveryForm.jsx"  ],
   "exclude": [
     "node_modules"
   ]

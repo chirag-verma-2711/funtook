@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function recent() {
   return (
-    <div className="w-full container mx-auto px-4 py-10">
+    <div className="w-full container mx-auto px-2 py-5 sm:px-4 sm:py-10">
       {/* Heading */}
-      <h2 className="text-center text-5xl font-semibold bg-linear-to-r from-[#FB69A8] to-[#4E0606] bg-clip-text text-transparent mb-10">
+      <h2 className="text-center text-2xl sm:text-5xl font-semibold bg-linear-to-r from-[#FB69A8] to-[#4E0606] bg-clip-text text-transparent mb-5 sm:mb-10">
         Our Recent Works
       </h2>
-      <div className="flex gap-8 overflow-x-auto justify-center mb-10">
+      {/* <div className="flex gap-8 overflow-x-auto justify-center mb-10">
         <div className="flex flex-col items-center">
           <img src="/images/Group 42.svg" className="w-30 h-30 rounded-full" />
           <span>All</span>
@@ -44,6 +44,7 @@ export default function recent() {
           />
           <span>Baby Welcome</span>
         </div>
+
         <div className="flex flex-col items-center">
           <img
             src="/images/Ellipse 35 (1).svg"
@@ -51,9 +52,45 @@ export default function recent() {
           />
           <span>Office Decoration</span>
         </div>
+      </div> */}
+
+      <div
+        className="
+    flex gap-6 p-0 smpx-4 mb-10
+    overflow-x-auto sm:overflow-visible
+    justify-start sm:justify-center
+    snap-x snap-mandatory
+  "
+      >
+        {[
+          { img: "/images/Group 42.svg", label: "All" },
+          { img: "/images/Ellipse 35.svg", label: "Kids Birthday" },
+          { img: "/images/Ellipse 35 (1).svg", label: "Office Decoration" },
+          { img: "/images/Group 42 (1).svg", label: "Anniversary" },
+          { img: "/images/Group 42 (2).svg", label: "Baby Welcome" },
+          { img: "/images/Ellipse 35 (1).svg", label: "Office Decoration" },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center shrink-0 snap-center"
+          >
+            <img
+              src={item.img}
+              alt={item.label}
+              className="
+          w-40 h-40 sm:w-28 sm:h-28
+          rounded-full object-cover
+        "
+            />
+            <span className="mt-2 text-xs sm:text-sm font-medium text-center">
+              {item.label}
+            </span>
+          </div>
+        ))}
       </div>
+
       {/* first section */}
-      <div className="grid md:grid-cols-2 gap-4 p-4">
+      <div className="grid md:grid-cols-2 gap-4 p-1 sm:p-4">
         <div className="row-span-2 relative aspect-square overflow-hidden">
           <Image
             src="/images/image1.svg"
@@ -135,6 +172,7 @@ export default function recent() {
                 className="object-cover"
               />
             </div>
+
             {/* Image 4 */}
             <div className="relative aspect-square overflow-hidden">
               <Image
@@ -181,6 +219,7 @@ export default function recent() {
                 className="object-cover"
               />
             </div>
+            
             {/* Image 4 */}
             <div className="relative aspect-square overflow-hidden">
               <Image
@@ -193,6 +232,7 @@ export default function recent() {
           </div>
         </div>
       </div>
+
       <div className="grid grid-cols-4 gap-4">
         {/* Left column */}
         <img
@@ -333,13 +373,13 @@ export default function recent() {
           <div className="flex items-center justify-center gap-4 mt-6">
             {/* WhatsApp */}
             <button className="flex items-center gap-2 bg-[#25BF31] text-white px-5 py-2 rounded-lg shadow">
-             <img src="/images/logos_whatsapp-icon.svg"/>
+              <img src="/images/logos_whatsapp-icon.svg" />
               Whatsapp Us
             </button>
 
             {/* Call Button */}
             <button className="flex items-center gap-2 bg-[#FC50A6] text-white px-5 py-2 rounded-lg shadow">
-              <img src="/images/ic_baseline-phone.svg"/>
+              <img src="/images/ic_baseline-phone.svg" />
               Call Us
             </button>
           </div>
