@@ -11,10 +11,12 @@
   "dependencies": {
     "@geist-ui/react": "^2.2.5",
     "autoprefixer": "^10.4.22",
+    "lucide-react": "^0.561.0",
     "next": "^16.0.7",
     "postcss": "^8.5.6",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-icons": "^5.5.0",
     "swiper": "^11.2.10"
   },
   "devDependencies": {

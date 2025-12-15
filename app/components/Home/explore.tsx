@@ -10,11 +10,17 @@ export default function Explore() {
       <div className="overflow-x-scroll md:overflow-hidden">
         <div className="min-w-[700px] flex w-full gap-4 [&_p]:text-center [&_p]:text-black [&_p]:lg:text-lg [&_p]:text-md [&_p]:my-4 [&_img]:w-full [&_img]:object-cover [&_img]:rounded-lg">
           <div>
-            <img src="/assets/home/explore/aniversary_deco.jpg" alt="aniversary_deco" />
+            <img
+              src="/assets/home/explore/aniversary_deco.jpg"
+              alt="aniversary_deco"
+            />
             <p>Anniversary Decoration</p>
           </div>
           <div>
-            <img src="/assets/home/explore/birthday_deco.jpg" alt="birthday_deco" />
+            <img
+              src="/assets/home/explore/birthday_deco.jpg"
+              alt="birthday_deco"
+            />
             <p>Birthday Decoration</p>
           </div>
           <div>

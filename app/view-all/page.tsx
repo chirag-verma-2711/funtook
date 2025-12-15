@@ -6,57 +6,78 @@ import "swiper/css/navigation";
 
 export default function viewall() {
   return (
-    <div className="w-full container mx-auto px-2 py-4 md:px-4 md:py-10">
-      <div className="flex items-center gap-4 mb-5">
-          <p className="text-left text-2xl md:text-3xl font-semibold bg-black bg-clip-text text-transparent ">
-            Birthday Decoration
-          </p>
-          <p>155 Products |</p>
-          <div className="flex gap-[5px]">
+    <div className="w-full container mx-auto px-6 py-4 md:px-4 md:py-10">
+      <div className=" flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-2 mb-5">
+        <p className="text-left text-2xl md:text-3xl font-semibold bg-black bg-clip-text text-transparent">
+          Birthday Decoration
+        </p>
+
+        {/* Products + Rating (Hidden on mobile) */}
+        <div className="hidden sm:flex items-center gap-4">
+          <p>155 Products</p>
+          <span>|</span>
+          <div className="flex items-center gap-1">
             <p className="text-[#2BAC17]">★ 4.5</p>
             <p>reviews</p>
           </div>
         </div>
-        <div className="flex flex-col items-start overflow-x-scroll md:overflow-hidden">
-        
+      </div>
 
-        <div className="flex gap-6 justify-center mb-10 ">
+      <div className="flex flex-col items-start overflow-x-scroll md:overflow-hidden">
+        <div className="flex gap-6 justify-center mb-10">
           <div className="flex flex-col items-center text-center">
-            <img src="/images/Ellipse 35.svg" className="w-30 rounded-full" />
-            <span className="text-sm  md:mt-2">Kids Birthday</span>
+            <img
+              src="/images/Ellipse 35.svg"
+              className="sm:w-40 rounded-full max-w-[100px]"
+            />
+            <span className="text-xs md:text-sm mt-2">Kids Birthday</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <img src="/images/Ellipse 35.svg" className="w-30 rounded-full" />
-            <span className="text-sm  md:mt-2">Kids Birthday</span>
+            <img
+              src="/images/Ellipse 35.svg"
+              className="sm:w-40 rounded-full max-w-[100px]"
+            />
+            <span className="text-xs md:text-sm mt-2">Kids Birthday</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <img src="/images/Ellipse 35.svg" className="w-30 rounded-full" />
-            <span className="text-sm  md:mt-2">Kids Birthday</span>
+            <img
+              src="/images/Ellipse 35.svg"
+              className="sm:w-40 rounded-full max-w-[100px]"
+            />
+            <span className="text-xs md:text-sm mt-2">Kids Birthday</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <img src="/images/Ellipse 35.svg" className="w-30 rounded-full" />
-            <span className="text-sm  md:mt-2">Kids Birthday</span>
+            <img
+              src="/images/Ellipse 35.svg"
+              className="sm:w-40 rounded-full max-w-[100px]"
+            />
+            <span className="text-xs md:text-sm mt-2">Kids Birthday</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <img src="/images/Ellipse 35.svg" className="w-30 rounded-full" />
-            <span className="text-sm  lg:mt-2">Kids Birthday</span>
+            <img
+              src="/images/Ellipse 35.svg"
+              className="sm:w-40 rounded-full max-w-[100px]"
+            />
+            <span className="text-xs md:text-sm mt-2">Kids Birthday</span>
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#F5F5F5] rounded-lg px-4 py-3 flex items-center justify-between">
+
+      <div className="w-full bg-[#E7E7E7] rounded-lg px-3 py-2 flex items-center justify-between">
         {/* Left Text */}
-        <p className="text-sm text-gray-700">Showing 12 Results...</p>
+        <p className="text-xs sm:text-sm text-black">Showing 12 Results...</p>
 
         {/* Right Sort By */}
         <div className="flex items-center gap-2 cursor-pointer">
-          <img src="/images/sort.svg" />
-          <span className="text-sm text-gray-700">Sort By</span>
+          <img src="/images/sort.svg" className="w-4 sm:w-5" />
+          <span className="text-xs sm:text-sm text-black">Sort By</span>
         </div>
       </div>
+
       {/* one */}
       <div className="mt-4 overflow-x-scroll md:overflow-hidden">
         <div className="min-w-[700px] flex w-full gap-4 [&_p]:text-center [&_p]:text-black [&_p]:lg:text-lg [&_p]:text-md [&_p]:my-4 [&_img]:w-full [&_img]:object-cover [&_img]:rounded-lg">
