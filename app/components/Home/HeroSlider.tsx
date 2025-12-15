@@ -9,21 +9,19 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
 import Image from "next/image";
+const slides = [
+  "/assets/home/heroslider/hero_aniversary.webp",
+  "/assets/home/heroslider/hero_birthday.webp",
+  "/assets/home/heroslider/hero_shower.webp",
+];
+
+// duplicate
+const swiperSlides = [...slides, ...slides];
 
 export default function HeroSlider() {
-  // const [isMounted, setIsMounted] = useState(false);
-
-  // useEffect(() => {
-  //   setIsMounted(true);
-  // }, []);
-
-  // if (!isMounted) {
-  //   return null;
-  // }
-
   return (
-    <div className="container mx-auto py-15 px-5">
-      <div className="swiper-container w-full">
+    <div className="container max-w-[1250px] mx-auto py-8 px-5">
+      <div className="swiper-container w-full md:[&_.swiper-slide]:flex! md:[&_.swiper-slide]:items-center md:[&_.swiper-slide]:min-h-[400px] md:[&_.swiper-wrapper]:min-h-[450px] md:[&_.swiper-slide-next_img]:absolute md:[&_.swiper-slide-next_img]:left-1/2 md:[&_.swiper-slide-next_img]:-translate-x-1/2 md:[&_.swiper-slide-next_img]:w-[170%] md:[&_.swiper-slide-next_img]:max-w-none md:[&_.swiper-slide-next_img]:z-9 [&_.swiper-slide_img]:transition-[width] [&_.swiper-slide_img]:duration-400 [&_.swiper-slide_img]:ease-in-out">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={50}
@@ -51,38 +49,17 @@ export default function HeroSlider() {
             },
           }}
         >
-          {/* Slide 1 */}
-          <SwiperSlide className="relative w-full h-80">
-            <Image 
-              src="/assets/home/heroslider/hero_aniversary.webp"
-              alt="hero_aniversary"
-              className="w-full h-auto object-cover rounded-xl shadow-lg"
-              width={1000}
-              height={1000}
-            />
-          </SwiperSlide>
-
-          {/* Slide 2 */}
-          <SwiperSlide className="relative w-full h-80">
-            <Image 
-              src="/assets/home/heroslider/hero_birthday.webp"
-              alt="hero_birthday"
-              className="w-full h-auto object-cover rounded-xl shadow-lg"
-              width={1000}
-              height={1000}
-            />
-          </SwiperSlide>
-
-          {/* Slide 3 */}
-          <SwiperSlide className="relative w-full h-80">
-            <Image 
-              src="/assets/home/heroslider/hero_shower.webp"
-              alt="hero_shower"
-              className="w-full h-auto object-cover rounded-xl shadow-lg"
-              width={1000}
-              height={1000}
-            />
-          </SwiperSlide>
+          {swiperSlides.map((src, index) => (
+            <SwiperSlide key={index} className="relative w-full h-80">
+              <Image
+                src={src}
+                alt={`hero-${index}`}
+                className="w-full h-auto object-cover rounded-xl shadow-lg"
+                width={1000}
+                height={1000}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
