@@ -823,8 +823,26 @@ export default function NewsletterSection() {
               </div>
 
               <div className="w-1/2 bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold">UPI QR</h3>
+                <div>
+                  <h3 className="text-base font-medium">Available Offers</h3>
+                </div>
 
+                <div className="flex bg-[#FFCCD7] p-3 rounded-full">
+                  <div>
+                    <Image
+                      src="/assets/home/win-up.svg"
+                      alt="Introduction"
+                      width={1000}
+                      height={1000}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </div>
+                  <div>
+                    <p>Win up to Rs200 cashback view...</p>
+                  </div>
+                </div>
+
+                <h3 className="text-lg font-semibold">UPI QR</h3>
                 <div className="mt-3 flex gap-3">
                   {/* QR Code */}
                   <div>
