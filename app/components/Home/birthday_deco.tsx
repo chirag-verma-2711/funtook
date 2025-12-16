@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Faqs from "../faqs/Faqs";
-import ImageSlider from "../imageslider/ImageSlider";
 
 export default function BirthdayDeco() {
   return (
