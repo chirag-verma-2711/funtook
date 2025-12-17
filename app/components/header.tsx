@@ -3,8 +3,12 @@ import { useState } from "react";
 // import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { HiUser, HiMail, HiLockClosed } from "react-icons/hi";
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSignupOpen, setIsSignupOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -41,7 +45,6 @@ export default function Header() {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-
             </button>
           </div>
         </div>
@@ -87,8 +90,8 @@ export default function Header() {
                 >
                   <path
                     stroke="currentColor"
-                    strokeLinecap="round"   // Corrected to camelCase
-                    strokeWidth={2}         // Corrected to camelCase
+                    strokeLinecap="round" // Corrected to camelCase
+                    strokeWidth={2} // Corrected to camelCase
                     d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
                   />
                 </svg>
@@ -123,7 +126,7 @@ export default function Header() {
                 <div className="lg:flex hidden">Cart</div>
               </div>
             </Link>
-            <button className="">
+            {/* <button className="">
               <div className="md:block hidden bg-(--pinkd) text-white py-2 px-5 rounded-md">
                 Sign Up
               </div>
@@ -146,7 +149,193 @@ export default function Header() {
                 </svg>
 
               </div>
-            </button>
+            </button> */}
+
+            <>
+              {/* Signup Button */}
+              <button onClick={() => setIsSignupOpen(true)}>
+                <div className="md:block hidden bg-(--pinkd) text-white py-2 px-5 rounded-md">
+                  Sign Up
+                </div>
+
+                <div className="md:hidden">
+                  <svg
+                    className="w-6 h-6 text-black"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </button>
+
+              {/* ================= SIGNUP POPUP ================= */}
+              {isSignupOpen && (
+                <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+                  <div className="relative w-full max-w-sm bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl p-8 border-3 border-gray-500">
+                    {/* Close */}
+                    <button
+                      onClick={() => setIsSignupOpen(false)}
+                      className="absolute top-0 right-0 bg-[#701C5A] text-white rounded-tr-[13px] rounded-bl-[15px] w-10 h-10 flex items-center justify-center text-sm"
+                    >
+                      ✕
+                    </button>
+
+                    <h2 className="text-center text-2xl font-semibold mb-6">
+                      Sign Up
+                    </h2>
+
+                    {/* Name */}
+                    <div className="mb-4">
+                      <div className="flex items-center border-b pb-1 mt-1">
+                        <input
+                          className="w-full outline-none bg-transparent text-lg"
+                          placeholder="Name"
+                        />
+                        <HiUser className="text-gray-600 text-xl" />
+                      </div>
+                    </div>
+
+                    {/* Email */}
+                    <div className="mb-4">
+                      <div className="flex items-center border-b pb-1 mt-1">
+                        <input
+                          className="w-full outline-none bg-transparent text-lg"
+                          placeholder="Email"
+                        />
+                        <HiMail className="text-gray-600 text-xl" />
+                      </div>
+                    </div>
+
+                    {/* Password */}
+                    <div className="mb-4">
+                      <div className="flex items-center border-b pb-1 mt-1">
+                        <input
+                          type="password"
+                          className="w-full outline-none bg-transparent text-lg"
+                          placeholder="Password"
+                        />
+                        <HiLockClosed className="text-gray-600 text-xl" />
+                      </div>
+                    </div>
+
+                    {/* Terms */}
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        className="w-4 h-4 bg-gray-300 rounded"
+                      />
+                      <p className="text-sm text-gray-700">
+                        I agree to the terms & conditions
+                      </p>
+                    </div>
+
+                    {/* Signup Button */}
+                    <button className="w-full mt-6 bg-[#FC6E88] text-white py-1 rounded-lg font-semibold">
+                      Sign Up
+                    </button>
+
+                    {/* Switch to Login */}
+                    <p className="text-center text-sm text-gray-700 mt-4">
+                      Already have an account?
+                      <button
+                        onClick={() => {
+                          setIsSignupOpen(false);
+                          setIsLoginOpen(true);
+                        }}
+                        className="text-blue-600 ml-1 font-medium"
+                      >
+                        Login
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* ================= LOGIN POPUP ================= */}
+              {isLoginOpen && (
+                <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+                  <div className="relative w-full max-w-sm bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl p-8 border-3 border-gray-500">
+                    {/* Close */}
+                    <button
+                      onClick={() => setIsLoginOpen(false)}
+                      className="absolute top-0 right-0 bg-[#701C5A] text-white rounded-tr-[13px] rounded-bl-[15px] w-10 h-10 flex items-center justify-center text-sm"
+                    >
+                      ✕
+                    </button>
+
+                    <h2 className="text-center text-2xl font-semibold mb-6">
+                      Login
+                    </h2>
+
+                    {/* Email */}
+                    <div className="mb-4">
+                      <div className="flex items-center border-b pb-1 mt-1">
+                        <input
+                          className="w-full outline-none bg-transparent text-lg"
+                          placeholder="Email"
+                        />
+                        <HiMail className="text-gray-600 text-xl" />
+                      </div>
+                    </div>
+
+                    {/* Password */}
+                    <div className="mb-4">
+                      <div className="flex items-center border-b pb-1 mt-1">
+                        <input
+                          type="password"
+                          className="w-full outline-none bg-transparent text-lg"
+                          placeholder="Password"
+                        />
+                        <HiLockClosed className="text-gray-600 text-xl" />
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between mt-3">
+                      <label className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          className="w-4 h-4 text-blue-600 bg-gray-300 rounded border-gray-300"
+                        />
+                        <span className="text-sm text-gray-700">
+                          Remember me
+                        </span>
+                      </label>
+
+                      <p className="text-sm text-blue-600 cursor-pointer hover:underline">
+                        Forget Password?
+                      </p>
+                    </div>
+
+                    {/* Login Button */}
+                    <button className="w-full mt-6 bg-[#FC6E88] text-white py-1 rounded-lg font-semibold">
+                      Login
+                    </button>
+
+                    {/* Switch to Signup */}
+                    <p className="text-center text-sm text-gray-700 mt-4">
+                      Don’t have an account?
+                      <button
+                        onClick={() => {
+                          setIsLoginOpen(false);
+                          setIsSignupOpen(true);
+                        }}
+                        className="text-blue-600 ml-1 font-medium"
+                      >
+                        Sign Up
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              )}
+            </>
           </div>
         </div>
       </div>
@@ -164,8 +353,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div className={`${isOpen ? "block" : "hidden"} lg:hidden`}>
-          <div
-            className="px-2 pt-2 pb-3 space-y-1 *:text-black *:block *:px-3 *:py-2 *:rounded-md *:text-base *:font-medium *:hover:bg-gray-700">
+          <div className="px-2 pt-2 pb-3 space-y-1 *:text-black *:block *:px-3 *:py-2 *:rounded-md *:text-base *:font-medium *:hover:bg-gray-700">
             <Link href="#Birthday">Birthday</Link>
             <Link href="#Anniversary">Anniversary</Link>
             <Link href="#Baby-Welcome">Baby Welcome</Link>
