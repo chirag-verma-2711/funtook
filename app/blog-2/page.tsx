@@ -9,58 +9,172 @@ import { X } from "lucide-react";
 
 export default function NewsletterSection() {
   const [open, setOpen] = useState(true);
+
+  const newsletterData = {
+    sidebar: [
+      { label: "Introduction", id: "introduction" },
+      { label: "The Emotional Impact of Balloons", id: "emotional-impact" },
+      { label: "Versatility in Themes and Styles", id: "versatility" },
+      { label: "Budget-Friendly Decoration Option", id: "budget-friendly" },
+      { label: "Customization", id: "customization" },
+    ],
+
+    sections: [
+      {
+        id: "introduction",
+        title: "Introduction",
+        image: "/assets/home/cake-girl.svg",
+        description:
+          "Balloon decoration is the heart of celebrations because it brings color, joy, and a warm welcoming vibe to any event.",
+        points: [
+          { title: "Joyful Atmosphere", text: "Bright colors lift mood." },
+          { title: "Versatile Themes", text: "Works for all events." },
+          { title: "Memorable Moments", text: "Creates photo-worthy scenes." },
+        ],
+      },
+      {
+        id: "emotional-impact",
+        title: "The Emotional Impact of Balloons",
+        image: "/assets/home/cake-girl.svg",
+        description:
+          "Balloon decoration is the heart of celebrations because it brings color, joy, and a warm welcoming vibe to any event.",
+        points: [
+          { title: "Joyful Atmosphere", text: "Bright colors lift mood." },
+          { title: "Versatile Themes", text: "Works for all events." },
+          { title: "Memorable Moments", text: "Creates photo-worthy scenes." },
+        ],
+      },
+      {
+        id: "versatility",
+        title: "Versatility in Themes and Styles",
+        image: "/assets/home/cake-girl.svg",
+        description:
+          "Balloon decoration is the heart of celebrations because it brings color, joy, and a warm welcoming vibe to any event.",
+        points: [
+          { title: "Joyful Atmosphere", text: "Bright colors lift mood." },
+          { title: "Versatile Themes", text: "Works for all events." },
+          { title: "Memorable Moments", text: "Creates photo-worthy scenes." },
+        ],
+      },
+      {
+        id: "budget-friendly",
+        title: "Budget-Friendly Decoration Option",
+        image: "/assets/home/cake-girl.svg",
+        description:
+          "Balloon decoration is the heart of celebrations because it brings color, joy, and a warm welcoming vibe to any event.",
+        points: [
+          { title: "Joyful Atmosphere", text: "Bright colors lift mood." },
+          { title: "Versatile Themes", text: "Works for all events." },
+          { title: "Memorable Moments", text: "Creates photo-worthy scenes." },
+        ],
+      },
+      {
+        id: "customization",
+        title: "Customization",
+        image: "/assets/home/cake-girl.svg",
+        description:
+          "Balloon decoration is the heart of celebrations because it brings color, joy, and a warm welcoming vibe to any event.",
+        points: [
+          { title: "Joyful Atmosphere", text: "Bright colors lift mood." },
+          { title: "Versatile Themes", text: "Works for all events." },
+          { title: "Memorable Moments", text: "Creates photo-worthy scenes." },
+        ],
+      },
+    ],
+  };
+
+  const blogCards = [
+    {
+      image: "/assets/home/card-img.svg",
+      category: "Birth Decoration",
+      title: "Why Balloon Decoration Is The Heart of Every Celebrations",
+      description:
+        "Balloon decoration brings instant joy, color, and life to any event. Whether it’s a birthday...",
+      authorImage: "/assets/home/card-girl.svg",
+      authorName: "Ruhi Sinha",
+      authorRole: "Senior Mentor | Decorations Specialist",
+    },
+    {
+      image: "/assets/home/card-img.svg",
+      category: "Birth Decoration",
+      title: "Why Balloon Decoration Is The Heart of Every Celebrations",
+      description:
+        "Balloon decoration brings instant joy, color, and life to any event. Whether it’s a birthday...",
+      authorImage: "/assets/home/card-girl.svg",
+      authorName: "Ruhi Sinha",
+      authorRole: "Senior Mentor | Decorations Specialist",
+    },
+    {
+      image: "/assets/home/card-img.svg",
+      category: "Birth Decoration",
+      title: "Why Balloon Decoration Is The Heart of Every Celebrations",
+      description:
+        "Balloon decoration brings instant joy, color, and life to any event. Whether it’s a birthday...",
+      authorImage: "/assets/home/card-girl.svg",
+      authorName: "Ruhi Sinha",
+      authorRole: "Senior Mentor | Decorations Specialist",
+    },
+  ];
+
   return (
     <div>
       <div className="container mx-auto px-4 py-12  bg-[#E6E6E6] md:bg-transparent">
-        <div className="w-full bg-[#FFF7F8] py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 sm:gap-[122px] gap:3">
+        <div className="w-full bg-[#FFF7F8] px-4 py-5 sm:py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 sm:gap-[20px] gap:3">
             {/* LEFT SECTION */}
-            <div className="flex flex-col gap-8 order-1 lg:order-2">
+            <div className="flex flex-col gap-5 sm:gap-8 order-2 lg:order-1">
               {/* Category */}
-              <p className="text-sm font-medium text-[#FC6E88] tracking-wider">
+              <p className="text-sm hidden md:block font-medium text-[#FC6E88] mt-4 sm:mt-0 tracking-wider">
                 BIRTHDAY DECORATION
               </p>
 
               {/* Heading */}
-              <h1 className="text-[32px] sm:text-[40px] lg:text-[40px] font-medium leading-tight">
+              <h1 className="text-[32px] sm:text-[40px] lg:text-[40px] font-medium mt-4 sm:mt-0 leading-tight">
                 Why Balloon Decoration Is The Heart of Every Celebrations
               </h1>
 
-              {/* Button */}
-              <button className="bg-[#FC6E88] text-white px-4 py-2 rounded-lg w-fit font-medium hover:bg-[#ff5474] transition">
+              <button className="w-full sm:w-fit bg-[#FC6E88] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#ff5474] transition">
                 Explore Funtook today
               </button>
 
-              {/* AUTHOR INFO */}
-              <div className="flex items-center gap-4 mt-4">
-                {/* Avatar */}
-                <Image
-                  src="/assets/home/card-girl.svg" // Replace with your image path
-                  alt="Author"
-                  width={48}
-                  height={48}
-                  className="rounded-full"
-                />
+              <div className="flex sm:flex-col flex-row gap-[15px]">
+
+                {/* AUTHOR INFO */}
+                <div className="flex items-center gap-4">
+                  {/* Avatar */}
+                  <Image
+                    src="/assets/home/card-girl.svg" // Replace with your image path
+                    alt="Author"
+                    width={100}
+                    height={1000}
+                    className="w-[200px] sm:w-[48px] h-auto rounded-full"
+                  />
+                </div>
+
+                {/* Info */}
+                <div className="flex flex-row items-center gap-[25px] text-sm text-[#585858] flex-wrap">
+                  <span className="font-medium">Ruhi Sinha</span>
+
+                  <span className="flex flex-row justify-between items-center gap-1">
+                    <span className="w-2 h-2 bg-[#585858] rounded-full"></span>
+                    Senior Mentor|Decorations Specialist
+                  </span>
+
+                  <span className="flex flex-row items-center gap-1">
+                    <span className="w-2 h-2 bg-[#585858] rounded-full"></span>
+                    September 7, 2025
+                  </span>
+                </div>
+
               </div>
 
-              {/* Info */}
-              <div className="flex justify-between gap-3 text-sm text-[#585858] flex-wrap">
-                <span className="font-medium">Ruhi Sinha</span>
-
-                <span className="flex justify-between items-center gap-1">
-                  <span className="w-2 h-2 bg-[#585858] rounded-full"></span>
-                  Senior Mentor|Decorations Specialist
-                </span>
-
-                <span className="flex items-center gap-1">
-                  <span className="w-2 h-2 bg-[#585858] rounded-full"></span>
-                  September 7, 2025
-                </span>
-              </div>
             </div>
 
             {/* RIGHT SECTION - IMAGE CARD */}
-            <div className="bg-white rounded-[30px] d p-0 overflow-hidden order-2 lg:order-1">
+            <div className="bg-white rounded-[30px] d p-0 overflow-hidden order-1 lg:order-2">
+              <p className="block lg:hidden md:hidden text-sm font-medium text-[#FC6E88] mt-4 sm:mt-0 mb-4 sm:mb-0 tracking-wider">
+                BIRTHDAY DECORATION
+              </p>
               <Image
                 src="/assets/home/card-img.svg" // Replace with your blog card image
                 alt="Blog Banner"
@@ -71,340 +185,69 @@ export default function NewsletterSection() {
             </div>
           </div>
         </div>
-        <h2 className="text-[22px] font-medium mb-4">Table of Contents</h2>
 
-        {/* <div className="flex flex-col md:flex-row min-h-screen bg-gray-50 mb-[38px]">
-
-          <aside className="w-64 p-6 bg-[#FFF0F4] shadow-md sticky top-0 h-[300px] overflow-y-auto">
-            <ul className="space-y-2 text-gray-700">
-              <li className="p-2 rounded bg-[#FFCDDB] cursor-pointer">
-                Introduction
-              </li>
-              <li className="p-2 rounded cursor-pointer">
-                The Emotional Impact of Balloons
-              </li>
-              <li className="p-2 rounded cursor-pointer">
-                Versatility in Themes and Styles
-              </li>
-              <li className="p-2 rounded cursor-pointer">
-                Budget-Friendly Decoration Option
-              </li>
-              <li className="p-2 rounded cursor-pointer">Customization</li>
-            </ul>
-          </aside>
-
-          <main className="flex-1 p-8 space-y-16">
-
-            <section id="introduction" className="space-y-4">
-              <h1 className="text-2xl font-bold">Introduction</h1>
-              <div className="w-full max-w-3xl">
-                <Image
-                  src="/assets/home/cake-girl.svg"
-                  alt="Introduction"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700">
-                Balloon decoration is the heart of celebrations because it
-                brings color, joy, and a warm welcoming vibe to any event.
-                Balloons instantly transform spaces and evoke positive emotions
-                for guests. They play full shapes, vibrant palettes, and
-                extraordinary artistic designs that engage and amaze everyone!
-              </p>
-              <ul className="list-disc list-inside text-gray-700">
-                <li>
-                  <strong>Joyful Atmosphere:</strong> Bright colors lift energy
-                  and mood.
-                </li>
-                <li>
-                  <strong>Versatile Themes:</strong> For birthdays, weddings,
-                  and more.
-                </li>
-                <li>
-                  <strong>Memorable Moments:</strong> Creates photo-worthy
-                  experiences.
-                </li>
-              </ul>
-            </section>
-
-            <section id="emotional-impact" className="space-y-4">
-              <h2 className="text-2xl font-bold">
-                The Emotional Impact of Balloons
-              </h2>
-              <div className="w-full max-w-3xl">
-                <Image
-                  src="/assets/home/cake-girl.svg"
-                  alt="Balloons Impact"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700">
-                Balloons instantly evoke happiness and excitement. Their colors
-                and shapes stimulate positive emotions, making any space feel
-                lively and welcoming. They bring a sense of celebration that
-                connects people and enhances the overall event experience.
-              </p>
-              <ul className="list-disc list-inside text-gray-700">
-                <li>
-                  <strong>Color Psychology:</strong> Bright colors uplift mood
-                  and create joy.
-                </li>
-                <li>
-                  <strong>Childlike Wonder:</strong> Balloons encourage fun,
-                  play, and playfulness.
-                </li>
-                <li>
-                  <strong>Shared Happiness:</strong> They encourage smiles,
-                  photos, and togetherness.
-                </li>
-              </ul>
-            </section>
-
-            <section id="Versatility" className="space-y-4">
-              <h1 className="text-2xl font-bold">
-                Versatility in Themes and Styles
-              </h1>
-              <div className="w-full max-w-3xl">
-                <Image
-                  src="/assets/home/cake-girl.svg"
-                  alt="Introduction"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700">
-                Balloon decoration is the heart of celebrations because it
-                brings color, joy, and a warm welcoming vibe to any event.
-                Balloons instantly transform spaces and evoke positive emotions
-                for guests. They play full shapes, vibrant palettes, and
-                extraordinary artistic designs that engage and amaze everyone!
-              </p>
-              <ul className="list-disc list-inside text-gray-700">
-                <li>
-                  <strong>Joyful Atmosphere:</strong> Bright colors lift energy
-                  and mood.
-                </li>
-                <li>
-                  <strong>Versatile Themes:</strong> For birthdays, weddings,
-                  and more.
-                </li>
-                <li>
-                  <strong>Memorable Moments:</strong> Creates photo-worthy
-                  experiences.
-                </li>
-              </ul>
-            </section>
-
-            <section id="Budget-Friendly" className="space-y-4">
-              <h1 className="text-2xl font-bold">
-                Budget-Friendly Decoration Option
-              </h1>
-              <div className="w-full max-w-3xl">
-                <Image
-                  src="/assets/home/cake-girl.svg"
-                  alt="Introduction"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-gray-700">
-                Balloon decoration is the heart of celebrations because it
-                brings color, joy, and a warm welcoming vibe to any event.
-                Balloons instantly transform spaces and evoke positive emotions
-                for guests. They play full shapes, vibrant palettes, and
-                extraordinary artistic designs that engage and amaze everyone!
-              </p>
-              <ul className="list-disc list-inside text-gray-700">
-                <li>
-                  <strong>Joyful Atmosphere:</strong> Bright colors lift energy
-                  and mood.
-                </li>
-                <li>
-                  <strong>Versatile Themes:</strong> For birthdays, weddings,
-                  and more.
-                </li>
-                <li>
-                  <strong>Memorable Moments:</strong> Creates photo-worthy
-                  experiences.
-                </li>
-              </ul>
-            </section>
-          </main>
-        </div> */}
+        <h2 className="text-[22px] font-medium mt-4 sm:mt-0 mb-4">Table of Contents</h2>
 
         <div className="flex flex-col md:flex-row min-h-screen bg-gray-50 mb-[38px]">
-          <aside
-            className="
-      w-full md:w-64 
-      p-6 bg-[#FFF0F4] shadow-md 
-      sticky md:top-0 
-      max-h-[250px] md:h-screen 
-      overflow-y-auto
-  "
-          >
+
+          {/* Sidebar */}
+          <aside className="w-full md:w-64 p-4 bg-[#FFF0F4] shadow-md sticky md:top-0 max-h-[250px] md:h-screen overflow-y-auto">
             <ul className="space-y-2 text-gray-700">
-              <li className="p-2 rounded bg-[#FFCDDB] cursor-pointer">
-                Introduction
-              </li>
-              <li className="p-2 rounded cursor-pointer">
-                The Emotional Impact of Balloons
-              </li>
-              <li className="p-2 rounded cursor-pointer">
-                Versatility in Themes and Styles
-              </li>
-              <li className="p-2 rounded cursor-pointer">
-                Budget-Friendly Decoration Option
-              </li>
-              <li className="p-2 rounded cursor-pointer">Customization</li>
+              {newsletterData.sidebar.map((item) => (
+                <li
+                  key={item.id}
+                  className="p-2 rounded cursor-pointer hover:bg-[#FFCDDB]"
+                  onClick={() =>
+                    document
+                      .getElementById(item.id)
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  {item.label}
+                </li>
+              ))}
             </ul>
           </aside>
 
+          {/* Content */}
           <main className="flex-1 p-4 sm:p-8 space-y-16">
-            <section id="introduction" className="space-y-4">
-              <h1 className="text-xl sm:text-2xl font-bold">Introduction</h1>
+            {newsletterData.sections.map((section) => (
+              <section
+                key={section.id}
+                id={section.id}
+                className="space-y-4"
+              >
+                {/* Title */}
+                <h1 className="text-xl sm:text-2xl font-bold">
+                  {section.title}
+                </h1>
 
-              <div className="">
-                <Image
-                  src="/assets/home/cake-girl.svg"
-                  alt="Introduction"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg w-full h-auto"
-                />
-              </div>
+                {/* Image */}
+                <div>
+                  <Image
+                    src={section.image}
+                    alt={section.title}
+                    width={1000}
+                    height={1000}
+                    className="rounded-lg w-full h-auto"
+                  />
+                </div>
 
-              <p className="text-gray-700">
-                Balloon decoration is the heart of celebrations because it
-                brings color, joy, and a warm welcoming vibe to any event.
-                Balloons instantly transform spaces and evoke positive emotions
-                for guests. They play full shapes, vibrant palettes, and
-                extraordinary artistic designs that engage and amaze everyone!
-              </p>
+                {/* Description */}
+                <p className="text-gray-700">
+                  {section.description}
+                </p>
 
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>
-                  <strong>Joyful Atmosphere:</strong> Bright colors lift mood.
-                </li>
-                <li>
-                  <strong>Versatile Themes:</strong> Works for all events.
-                </li>
-                <li>
-                  <strong>Memorable Moments:</strong> Creates photo-worthy
-                  scenes.
-                </li>
-              </ul>
-            </section>
-
-            <section id="emotional-impact" className="space-y-4">
-              <h1 className="text-xl sm:text-2xl font-bold">Introduction</h1>
-
-              <div className="">
-                <Image
-                  src="/assets/home/cake-girl.svg"
-                  alt="Introduction"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg w-full h-auto"
-                />
-              </div>
-
-              <p className="text-gray-700">
-                Balloon decoration is the heart of celebrations because it
-                brings color, joy, and a warm welcoming vibe to any event.
-                Balloons instantly transform spaces and evoke positive emotions
-                for guests. They play full shapes, vibrant palettes, and
-                extraordinary artistic designs that engage and amaze everyone!
-              </p>
-
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>
-                  <strong>Joyful Atmosphere:</strong> Bright colors lift mood.
-                </li>
-                <li>
-                  <strong>Versatile Themes:</strong> Works for all events.
-                </li>
-                <li>
-                  <strong>Memorable Moments:</strong> Creates photo-worthy
-                  scenes.
-                </li>
-              </ul>
-            </section>
-
-            <section id="Versatility" className="space-y-4">
-              <h1 className="text-xl sm:text-2xl font-bold">Introduction</h1>
-
-              <div className="">
-                <Image
-                  src="/assets/home/cake-girl.svg"
-                  alt="Introduction"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg w-full h-auto"
-                />
-              </div>
-
-              <p className="text-gray-700">
-                Balloon decoration is the heart of celebrations because it
-                brings color, joy, and a warm welcoming vibe to any event.
-                Balloons instantly transform spaces and evoke positive emotions
-                for guests. They play full shapes, vibrant palettes, and
-                extraordinary artistic designs that engage and amaze everyone!
-              </p>
-
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>
-                  <strong>Joyful Atmosphere:</strong> Bright colors lift mood.
-                </li>
-                <li>
-                  <strong>Versatile Themes:</strong> Works for all events.
-                </li>
-                <li>
-                  <strong>Memorable Moments:</strong> Creates photo-worthy
-                  scenes.
-                </li>
-              </ul>
-            </section>
-
-            <section id="Budget-Friendly" className="space-y-4">
-              <h1 className="text-xl sm:text-2xl font-bold">Introduction</h1>
-
-              <div className="">
-                <Image
-                  src="/assets/home/cake-girl.svg"
-                  alt="Introduction"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg w-full h-auto"
-                />
-              </div>
-
-              <p className="text-gray-700">
-                Balloon decoration is the heart of celebrations because it
-                brings color, joy, and a warm welcoming vibe to any event.
-                Balloons instantly transform spaces and evoke positive emotions
-                for guests. They play full shapes, vibrant palettes, and
-                extraordinary artistic designs that engage and amaze everyone!
-              </p>
-
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>
-                  <strong>Joyful Atmosphere:</strong> Bright colors lift mood.
-                </li>
-                <li>
-                  <strong>Versatile Themes:</strong> Works for all events.
-                </li>
-                <li>
-                  <strong>Memorable Moments:</strong> Creates photo-worthy
-                  scenes.
-                </li>
-              </ul>
-            </section>
+                {/* Points */}
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                  {section.points.map((point, index) => (
+                    <li key={index}>
+                      <strong>{point.title}:</strong> {point.text}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
           </main>
         </div>
 
@@ -412,102 +255,57 @@ export default function NewsletterSection() {
           <h2 className="text-4xl font-bold my-5">Related Posts</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div className="px-5 py-8 border-2 md:border border-[#CBCBCB] bg-white md:bg-transparent">
-              <Image
-                src="/assets/home/card-img.svg"
-                alt="card-img"
-                width={1000}
-                height={1000}
-                className="w-full h-auto"
-              />
-              <div className="text-xs font-medium bg-[#C8E1FF] w-fit px-3 rounded my-2">
-                Birth Decoration
-              </div>
-              <p className="text-lg font-medium">
-                Why Balloon Decoration Is The Heart of Every Celebrations
-              </p>
-              <p className="text-sm font-normal">
-                Balloon decoration brings instant joy, color, and life to any
-                event. Whether it’s a birthday...
-              </p>
-              <div className="mt-2">
+            {blogCards.map((card, index) => (
+              <div
+                key={index}
+                className="px-5 py-8 border-2 md:border border-[#CBCBCB] bg-white md:bg-transparent"
+              >
+                {/* Card Image */}
                 <Image
-                  src="/assets/home/card-girl.svg"
+                  src={card.image}
                   alt="card-img"
-                  width={50}
-                  height={50}
+                  width={1000}
+                  height={1000}
+                  className="w-full h-auto"
                 />
-                <p className="text-sm font-bold">Ruhi Sinha</p>
-                <p className="text-sm font-normal">
-                  Senior Mentor | Decorations Specialist
+
+                {/* Category */}
+                <div className="text-xs font-medium bg-[#C8E1FF] w-fit px-3 rounded my-2">
+                  {card.category}
+                </div>
+
+                {/* Title */}
+                <p className="text-lg font-medium">
+                  {card.title}
                 </p>
-              </div>
-            </div>
-            <div className="px-5 py-8 border-2 md:border border-[#CBCBCB] bg-white md:bg-transparent">
-              <Image
-                src="/assets/home/card-img.svg"
-                alt="card-img"
-                width={1000}
-                height={1000}
-                className="w-full h-auto"
-              />
-              <div className="text-xs font-medium bg-[#C8E1FF] w-fit px-3 rounded my-2">
-                Birth Decoration
-              </div>
-              <p className="text-lg font-medium">
-                Why Balloon Decoration Is The Heart of Every Celebrations
-              </p>
-              <p className="text-sm font-normal">
-                Balloon decoration brings instant joy, color, and life to any
-                event. Whether it’s a birthday...
-              </p>
-              <div className="mt-2">
-                <Image
-                  src="/assets/home/card-girl.svg"
-                  alt="card-img"
-                  width={50}
-                  height={50}
-                />
-                <p className="text-sm font-bold">Ruhi Sinha</p>
+
+                {/* Description */}
                 <p className="text-sm font-normal">
-                  Senior Mentor | Decorations Specialist
+                  {card.description}
                 </p>
+
+                {/* Author */}
+                <div className="mt-2">
+                  <Image
+                    src={card.authorImage}
+                    alt="author"
+                    width={50}
+                    height={50}
+                  />
+                  <p className="text-sm font-bold">
+                    {card.authorName}
+                  </p>
+                  <p className="text-sm font-normal">
+                    {card.authorRole}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="px-5 py-8 border-2 md:border border-[#CBCBCB] bg-white md:bg-transparent">
-              <Image
-                src="/assets/home/card-img.svg"
-                alt="card-img"
-                width={1000}
-                height={1000}
-                className="w-full h-auto"
-              />
-              <div className="text-xs font-medium bg-[#C8E1FF] w-fit px-3 rounded my-2">
-                Birth Decoration
-              </div>
-              <p className="text-lg font-medium">
-                Why Balloon Decoration Is The Heart of Every Celebrations
-              </p>
-              <p className="text-sm font-normal">
-                Balloon decoration brings instant joy, color, and life to any
-                event. Whether it’s a birthday...
-              </p>
-              <div className="mt-2">
-                <Image
-                  src="/assets/home/card-girl.svg"
-                  alt="card-img"
-                  width={50}
-                  height={50}
-                />
-                <p className="text-sm font-bold">Ruhi Sinha</p>
-                <p className="text-sm font-normal">
-                  Senior Mentor | Decorations Specialist
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
+
         </div>
       </div>
+
       <section>
         <div className="bg-[#B189A3] text-center py-20 px-4 sm:py-32 sm:px-6 md:py-40 md:px-10 md:mt-[35px] mt-0">
           <h2 className="font-medium text-[20px] sm:text-4xl md:text-5xl lg:text-6xl">
@@ -531,156 +329,11 @@ export default function NewsletterSection() {
         </div>
       </section>
 
-      {/* sign up  */}
-      {/* <div className="flex items-center justify-center">
-        <div className="relative w-full max-w-sm bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl p-8 border-3 border-gray-500">
-          
-          <button className="absolute top-0 right-0 bg-[#701C5A] text-white rounded-tr-[13px] rounded-bl-[15px] w-10 h-10 flex items-center justify-center text-sm">
-            ✕
-          </button>
 
-        
-          <h2 className="text-center text-2xl font-semibold mb-6">Sign Up</h2>
-
-         
-          <div className="mb-4">
-            <div className="flex items-center border-b pb-1 mt-1">
-              <input
-                type="text"
-                className="w-full outline-none bg-transparent text-lg"
-                placeholder="Name"
-              />
-              <HiUser className="text-gray-600 text-xl" />
-            </div>
-          </div>
-
-          
-          <div className="mb-4">
-            <div className="flex items-center border-b pb-1 mt-1">
-              <input
-                type="email"
-                className="w-full outline-none bg-transparent text-lg"
-                placeholder="Email"
-              />
-              <HiMail className="text-gray-600 text-xl" />
-            </div>
-          </div>
-
-        
-          <div className="mb-4">
-            <div className="flex items-center border-b pb-1 mt-1">
-              <input
-                type="password"
-                className="w-full outline-none bg-transparent text-lg"
-                placeholder="Password"
-              />
-              <HiLockClosed className="text-gray-600 text-xl" />
-            </div>
-          </div>
-
-          
-          <div className="flex items-center gap-1 mt-3">
-            <input
-              type="checkbox"
-              className="w-4 h-4 appearance-none bg-[#AEAEAE] rounded"
-            />
-            <p className="text-sm text-gray-700">
-              I agree to the terms & conditions
-            </p>
-          </div>
-
-          
-          <button className="w-full mt-6 bg-[#FC6E88] from-[#FF7CA3] to-[#FF5277] text-white py-1 rounded-lg font-semibold">
-            Sign Up
-          </button>
-
-          <p className="text-center text-sm text-gray-700 mt-4">
-            Already have an account?
-            <a href="#" className="text-blue-600 ml-1 font-medium">
-              Login
-            </a>
-          </p>
-        </div>
-      </div> */}
-
-      {/* Login */}
-      <div className="flex items-center justify-center">
-        <div className="relative w-full max-w-sm bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl p-8 border-3 border-gray-500">
-          {/* Close Button */}
-          <button className="absolute top-0 right-0 bg-[#701C5A] text-white rounded-tr-[13px] rounded-bl-[15px] w-10 h-10 flex items-center justify-center text-sm">
-            ✕
-          </button>
-
-          {/* Heading */}
-          <h2 className="text-center text-2xl font-semibold mb-6">Login</h2>
-
-          {/* Email Field */}
-          <div className="mb-4">
-            <div className="flex items-center border-b pb-1 mt-1">
-              <input
-                type="email"
-                className="w-full outline-none bg-transparent text-lg"
-                placeholder="Email"
-              />
-              <HiMail className="text-gray-600 text-xl" />
-            </div>
-          </div>
-
-          {/* Password Field */}
-          <div className="mb-4">
-            <div className="flex items-center border-b pb-1 mt-1">
-              <input
-                type="password"
-                className="w-full outline-none bg-transparent text-lg"
-                placeholder="Password"
-              />
-              <HiLockClosed className="text-gray-600 text-xl" />
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between mt-3">
-            {/* Left side: Checkbox and label */}
-            <label className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                className="w-4 h-4 text-blue-600 bg-gray-300 rounded border-gray-300 focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">Remember me</span>
-            </label>
-
-            {/* Right side: Forget Password */}
-            <p className="text-sm text-blue-600 cursor-pointer hover:underline">
-              Forget Password?
-            </p>
-          </div>
-
-          {/* Button */}
-          <button className="w-full mt-6 bg-[#FC6E88] from-[#FF7CA3] to-[#FF5277] text-white py-1 rounded-lg font-semibold">
-            Login
-          </button>
-
-          <p className="text-center text-sm text-gray-700 mt-4">
-            Don’t have an account?
-            <a href="#" className="text-blue-600 ml-1 font-medium">
-              Sign Up
-            </a>
-          </p>
-
-          <p className="text-center text-sm text-gray-700 mt-4">
-            By continuing I agree to Funtook
-            <a href="#" className="text-blue-600 ml-1 font-medium">
-              Term & condition
-            </a>
-            and
-            <a href="#" className="text-blue-600 ml-1 font-medium">
-              Privacy Policy
-            </a>
-          </p>
-        </div>
-      </div>
-      <div>
+      <div className="">
         <DeliveryDetails />
       </div>
+
       <div>
         <DeliveryForm isOpen={open} onClose={() => setOpen(false)} />
       </div>
@@ -929,6 +582,7 @@ export default function NewsletterSection() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }

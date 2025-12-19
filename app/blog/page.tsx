@@ -399,7 +399,7 @@ export default function NewsletterSection() {
 
       
       <section>
-        <div className="bg-[#B189A3] text-center py-20 px-4 sm:py-32 sm:px-6 md:py-40 md:px-10 md:mt-[100px] mt-0">
+        <div className="bg-[#B189A3] text-center py-20 px-4 sm:py-32 sm:px-6 md:py-40 md:px-10  ">
           <h2 className="font-medium text-[20px] sm:text-4xl md:text-5xl lg:text-6xl">
             <span
               className="

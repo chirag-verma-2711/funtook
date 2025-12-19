@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { HiUser, HiMail, HiLockClosed } from "react-icons/hi";
+import { HiX } from "react-icons/hi";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -126,31 +127,6 @@ export default function Header() {
                 <div className="lg:flex hidden">Cart</div>
               </div>
             </Link>
-            {/* <button className="">
-              <div className="md:block hidden bg-(--pinkd) text-white py-2 px-5 rounded-md">
-                Sign Up
-              </div>
-              <div className="md:hidden">
-                
-                <svg
-                  className="w-6 h-6 text-black"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fillRule="evenodd"  // Corrected `fill-rule` to `fillRule`
-                    d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z"
-                    clipRule="evenodd"  // Corrected `clip-rule` to `clipRule`
-                  />
-                </svg>
-
-              </div>
-            </button> */}
-
             <>
               {/* Signup Button */}
               <button onClick={() => setIsSignupOpen(true)}>
@@ -178,14 +154,15 @@ export default function Header() {
 
               {/* ================= SIGNUP POPUP ================= */}
               {isSignupOpen && (
-                <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-                  <div className="relative w-full max-w-sm bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl p-8 border-3 border-gray-500">
+                <div className="fixed inset-0 backdrop-blur-[3px] flex justify-center z-50">
+                  <div className="relative w-full max-w-[350px] rounded-2xl shadow-xl p-8 h-fit top-[210px] bg-[#ffffffde] border-[3px] border-[#D8D8D8]">
                     {/* Close */}
                     <button
                       onClick={() => setIsSignupOpen(false)}
                       className="absolute top-0 right-0 bg-[#701C5A] text-white rounded-tr-[13px] rounded-bl-[15px] w-10 h-10 flex items-center justify-center text-sm"
                     >
-                      ✕
+                      {/* ✕ */}
+                      <HiX className="text-lg border-2  rounded-full" />
                     </button>
 
                     <h2 className="text-center text-2xl font-semibold mb-6">
@@ -196,10 +173,10 @@ export default function Header() {
                     <div className="mb-4">
                       <div className="flex items-center border-b pb-1 mt-1">
                         <input
-                          className="w-full outline-none bg-transparent text-lg"
+                          className="w-full outline-none bg-transparent text-lg placeholder-black pl-6"
                           placeholder="Name"
                         />
-                        <HiUser className="text-gray-600 text-xl" />
+                        <HiUser className="text-black text-xl" />
                       </div>
                     </div>
 
@@ -207,22 +184,22 @@ export default function Header() {
                     <div className="mb-4">
                       <div className="flex items-center border-b pb-1 mt-1">
                         <input
-                          className="w-full outline-none bg-transparent text-lg"
+                          className="w-full outline-none bg-transparent text-lg placeholder-black pl-6"
                           placeholder="Email"
                         />
-                        <HiMail className="text-gray-600 text-xl" />
+                        <HiMail className="text-black text-xl" />
                       </div>
                     </div>
 
                     {/* Password */}
                     <div className="mb-4">
-                      <div className="flex items-center border-b pb-1 mt-1">
+                      <div className="flex items-center border-b pb-1 mt-1 placeholder-black pl-6">
                         <input
                           type="password"
-                          className="w-full outline-none bg-transparent text-lg"
+                          className="w-full outline-none bg-transparent text-lg placeholder-black pl-[2px]"
                           placeholder="Password"
                         />
-                        <HiLockClosed className="text-gray-600 text-xl" />
+                        <HiLockClosed className="text-black text-xl" />
                       </div>
                     </div>
 
@@ -230,15 +207,19 @@ export default function Header() {
                     <div className="flex items-center gap-2">
                       <input
                         type="checkbox"
-                        className="w-4 h-4 bg-gray-300 rounded"
+                        className="w-4 h-4 bg-gray-300 accent-[#701C5A] rounded"
                       />
+                      {/* <input
+                        type="checkbox"
+                        className="w-4 h-4 appearance-none border border-[#AEAEAE] rounded bg-[#AEAEAE] checked:bg-[#701C5A]"
+                      /> */}
                       <p className="text-sm text-gray-700">
                         I agree to the terms & conditions
                       </p>
                     </div>
 
                     {/* Signup Button */}
-                    <button className="w-full mt-6 bg-[#FC6E88] text-white py-1 rounded-lg font-semibold">
+                    <button className="w-full mt-6 bg-[linear-gradient(180deg,rgba(252,110,136,1)_0%,rgba(153,60,66,1)_130%)] text-white py-1 rounded-lg font-semibold">
                       Sign Up
                     </button>
 
@@ -250,7 +231,7 @@ export default function Header() {
                           setIsSignupOpen(false);
                           setIsLoginOpen(true);
                         }}
-                        className="text-blue-600 ml-1 font-medium"
+                        className="text-[#3905B3] ml-1 font-medium"
                       >
                         Login
                       </button>
@@ -261,14 +242,15 @@ export default function Header() {
 
               {/* ================= LOGIN POPUP ================= */}
               {isLoginOpen && (
-                <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-                  <div className="relative w-full max-w-sm bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl p-8 border-3 border-gray-500">
+                <div className="fixed inset-0 backdrop-blur-[3px] flex  justify-center z-50">
+                  <div className="relative w-full max-w-[350px] rounded-2xl shadow-xl p-8 h-fit top-[210px] bg-[#ffffffde] border-[3px] border-[#D8D8D8]">
                     {/* Close */}
                     <button
                       onClick={() => setIsLoginOpen(false)}
                       className="absolute top-0 right-0 bg-[#701C5A] text-white rounded-tr-[13px] rounded-bl-[15px] w-10 h-10 flex items-center justify-center text-sm"
                     >
-                      ✕
+                      {/* ✕ */}
+                      <HiX className="text-lg border-2  rounded-full" />
                     </button>
 
                     <h2 className="text-center text-2xl font-semibold mb-6">
@@ -279,10 +261,10 @@ export default function Header() {
                     <div className="mb-4">
                       <div className="flex items-center border-b pb-1 mt-1">
                         <input
-                          className="w-full outline-none bg-transparent text-lg"
+                          className="w-full outline-none bg-transparent text-lg placeholder-black pl-6"
                           placeholder="Email"
                         />
-                        <HiMail className="text-gray-600 text-xl" />
+                        <HiMail className="text-black text-xl" />
                       </div>
                     </div>
 
@@ -291,10 +273,10 @@ export default function Header() {
                       <div className="flex items-center border-b pb-1 mt-1">
                         <input
                           type="password"
-                          className="w-full outline-none bg-transparent text-lg"
+                          className="w-full outline-none bg-transparent text-lg placeholder-black pl-6"
                           placeholder="Password"
                         />
-                        <HiLockClosed className="text-gray-600 text-xl" />
+                        <HiLockClosed className="text-black text-xl" />
                       </div>
                     </div>
 
@@ -309,7 +291,7 @@ export default function Header() {
                         </span>
                       </label>
 
-                      <p className="text-sm text-blue-600 cursor-pointer hover:underline">
+                      <p className="text-sm text-[#3905B3] cursor-pointer hover:underline">
                         Forget Password?
                       </p>
                     </div>
@@ -327,11 +309,14 @@ export default function Header() {
                           setIsLoginOpen(false);
                           setIsSignupOpen(true);
                         }}
-                        className="text-blue-600 ml-1 font-medium"
+                        className="text-[#3905B3] ml-1 font-medium"
                       >
                         Sign Up
                       </button>
                     </p>
+
+                    <p className="text-center text-sm text-gray-700 mt-4">By continuing I agree to Funtook <span className="text-[#3905B3] ml-1 font-medium">Term & condition</span>  and <span className="text-[#3905B3] ml-1 font-medium">Privacy Policy</span> </p>
+
                   </div>
                 </div>
               )}
