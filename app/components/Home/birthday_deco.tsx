@@ -2,94 +2,123 @@
 
 import Link from "next/link";
 import Faqs from "../faqs/Faqs";
-
+import { useRouter } from "next/navigation";
 export default function BirthdayDeco() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    // Navigate to product details page
+    // You can pass product ID dynamically if needed
+    router.push("/product-details"); // replace 1 with your product ID
+  };
   return (
     <div className="mx-auto">
       {/* <div className="text-center mb-15 headings_border">
         <h2 className="font-bold text-[34px]">Explore</h2>
         <p className="text-[18px] text-(--subhead)">Wide Range Of Options</p>
       </div> */}
-    
+
       <div className="container mx-auto p-4">
-        <div className=" flex justify-between items-center mb-5">
+        <div
+          id="Birthday"
+          className=" flex justify-between items-center mb-5 scroll-mt-24"
+        >
           <h3 className="text-[16px] sm:text-[18px] lg:text-[27px] font-semibold">
             Birthday Decoration
           </h3>
           <Link
-            href="#"
+            href="/view-all"
             className="text-(--pinkd) underline text-[12px] sm:text-sm"
           >
             View All
           </Link>
         </div>
-        <div className="overflow-x-scroll md:overflow-hidden">
+        <div
+          onClick={handleClick}
+          className="overflow-x-scroll md:overflow-hidden cursor-pointer"
+        >
           <div className="min-w-[700px] flex w-full gap-4 [&_p]:text-center [&_p]:text-black [&_p]:lg:text-lg [&_p]:text-md [&_p]:my-4 [&_img]:w-full [&_img]:object-cover [&_img]:rounded-lg">
             <div>
               <img
                 src="/assets/home/birthday_deco/1.jpg"
                 alt="aniversary_deco"
               />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹2999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Colorful Magical Balloon
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
-            <div>
+            <div onClick={handleClick} className="cursor-pointer">
               <img src="/assets/home/birthday_deco/2.jpg" alt="birthday_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹2199</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Magical Birthday Decoration
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2199</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/assets/home/birthday_deco/3.jpg" alt="shower_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹1999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹2999
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Party Balloon Backdrop Decors
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹1999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹2999
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/assets/home/birthday_deco/4.jpg" alt="kids_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹8499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Black Golden Arcs Decoration
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹4399</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹8499
+                  </span>
+                  <span className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    23% OFF
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -97,12 +126,15 @@ export default function BirthdayDeco() {
       </div>
 
       <div className="mt-10 container mx-auto p-4">
-        <div className="flex justify-between items-center mb-5">
+        <div
+          id="Anniversary"
+          className="flex justify-between items-center mb-5 scroll-mt-24"
+        >
           <h3 className="text-[16px] sm:text-[18px] lg:text-[27px] font-semibold">
             Anniversary Decoration
           </h3>
           <Link
-            href="#"
+            href="/view-all"
             className="text-(--pinkd) underline text-[12px] sm:text-sm"
           >
             View All
@@ -112,147 +144,82 @@ export default function BirthdayDeco() {
           <div className="min-w-[700px] flex w-full gap-4 *:w-[25%] [&_p]:text-center [&_p]:text-black [&_p]:lg:text-lg [&_p]:text-md [&_p]:my-4 [&_img]:w-full [&_img]:object-cover [&_img]:rounded-lg">
             <div>
               <img src="/images/anniversardecor1.svg" alt="aniversary_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹2999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Anniversary Home Decoration
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/images/anniversardecor2.svg" alt="birthday_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹2199</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Romantic Anniversary Room
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2199</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/images/anniversardecor3.svg" alt="kids_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹1999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹2999
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Shinny Anniversary Decors
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹1999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹2999
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/images/anniversardecor4.svg" alt="shower_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-10 container mx-auto p-4">
-        <div className="flex justify-between items-center mb-5">
-          <h3 className="text-[16px] sm:text-[18px] lg:text-[27px] font-semibold">
-            Surprising Loved Once Decoration
-          </h3>
-          <Link
-            href="#"
-            className="text-(--pinkd) underline text-[12px] sm:text-sm"
-          >
-            View All
-          </Link>
-        </div>
-        <div className="overflow-x-scroll md:overflow-hidden">
-          <div className="min-w-[700px] flex w-full gap-4 *:w-[25%] [&_p]:text-center [&_p]:text-black [&_p]:lg:text-lg [&_p]:text-md [&_p]:my-4 [&_img]:w-full [&_img]:object-cover [&_img]:rounded-lg">
-            <div>
-              <img src="/images/surprise.svg" alt="aniversary_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
-              </div>
-            </div>
-            <div>
-              <img src="/images/room decor.svg" alt="birthday_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
-              </div>
-            </div>
-            <div>
-              <img src="/images/roomdecors.svg" alt="shower_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
-              </div>
-            </div>
-            <div>
-              <img src="/images/21bday.svg" alt="kids_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Red Anniversary room Decors
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹4399</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹8499
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -261,11 +228,11 @@ export default function BirthdayDeco() {
 
       <div className="container mx-auto grid grid-cols-12 gap-4 p-4 mt-10">
         {/* LEFT BIG IMAGE */}
-        <div className=" hidden md:block col-span-12 md:col-span-6 relative h-[420px] md:h-[520px] rounded-tr-[40px] rounded-bl-2xl overflow-hidden">
-          <span className="absolute top-3 left-4 text-3xl font-bold text-black z-10">
+        <div className=" hidden md:block col-span-12 md:col-span-6 relative h-[420px] md:h-[520px] rounded-tr-2xl rounded-br-2xl rounded-bl-2xl overflow-hidden">
+          <span className="absolute top-3 text-4xl font-bold text-black z-10">
             The New Collections
           </span>
-          <span className="absolute top-[45px] left-5 text-black z-10">
+          <span className="absolute top-[45px] left-2 text-black z-10">
             From Haldi to Honeymoon!
           </span>
 
@@ -348,6 +315,106 @@ export default function BirthdayDeco() {
           </div>
         </div>
       </div>
+      <div className="mt-10 container mx-auto p-4">
+        <div
+          id="Anniversary"
+          className="flex justify-between items-center mb-5 scroll-mt-24"
+        >
+          <h3 className="text-[16px] sm:text-[18px] lg:text-[27px] font-semibold">
+            Surprising Loved Once Decoration
+          </h3>
+          <Link
+            href="/view-all"
+            className="text-(--pinkd) underline text-[12px] sm:text-sm"
+          >
+            View All
+          </Link>
+        </div>
+        <div className="overflow-x-scroll md:overflow-hidden">
+          <div className="min-w-[700px] flex w-full gap-4 *:w-[25%] [&_p]:text-center [&_p]:text-black [&_p]:lg:text-lg [&_p]:text-md [&_p]:my-4 [&_img]:w-full [&_img]:object-cover [&_img]:rounded-lg">
+            <div>
+              <img src="/images/surprise.svg" alt="aniversary_deco" />
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Anniversary Home Decoration
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src="/images/room decor.svg" alt="birthday_deco" />
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Romantic Anniversary Room
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2199</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src="/images/roomdecors.svg" alt="shower_deco" />
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Shinny Anniversary Decors
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹1999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹2999
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src="/images/21bday.svg" alt="kids_deco" />
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Red Anniversary room Decors
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹4399</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹8499
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* section4 */}
       <div className="mt-[65px] container mx-auto p-4">
@@ -421,12 +488,15 @@ export default function BirthdayDeco() {
       </div>
       {/* section5 */}
       <div className="mt-10 container mx-auto p-4">
-        <div className="flex justify-between items-center mb-5">
+        <div
+          id="Baby-Welcome"
+          className="flex justify-between items-center mb-5 scroll-mt-24"
+        >
           <h3 className="text-[16px] sm:text-[18px] lg:text-[27px] font-semibold">
             Welcome Baby Decoration
           </h3>
           <Link
-            href="#"
+            href="/view-all"
             className="text-(--pinkd) underline text-[12px] sm:text-sm"
           >
             View All
@@ -436,78 +506,94 @@ export default function BirthdayDeco() {
           <div className="min-w-[700px] flex w-full gap-4 *:w-[25%] [&_p]:text-center [&_p]:text-black [&_p]:lg:text-lg [&_p]:text-md [&_p]:my-4 [&_img]:w-full [&_img]:object-cover [&_img]:rounded-lg">
             <div>
               <img src="/images/babyshower.svg" alt="aniversary_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Welcome Baby Home
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹2999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Welcome Baby Home
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/assets/sectionimages/icecream.svg" alt="shower_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Baby Welcome Backdrops Decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹2999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Baby Welcome Backdrops
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/assets/sectionimages/bday.svg" alt="shower_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Baby Welcome Decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹2999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Baby Welcome Decors
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/assets/sectionimages/welcome.svg" alt="kids_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Baby Girl Welcome Decoration
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹2999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Baby Girl Welcome Decoration
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="mt-10 container mx-auto p-4">
-        <div className="flex justify-between items-center mb-5">
+        <div className="flex justify-between items-center mb-5 ">
           <h3 className="text-[16px] sm:text-[18px] lg:text-[27px] font-semibold">
             Baby Shower Decoration
           </h3>
           <Link
-            href="#"
+            href="/view-all"
             className="text-(--pinkd) underline text-[12px] sm:text-sm"
           >
             View All
@@ -520,18 +606,22 @@ export default function BirthdayDeco() {
                 src="/assets/sectionimages/babyshower1.svg"
                 alt="aniversary_deco"
               />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Baby Shower Decor
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹1699</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Baby Shower Decor
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹1699</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
@@ -539,18 +629,22 @@ export default function BirthdayDeco() {
                 src="/assets/sectionimages/babyshower2.svg"
                 alt="birthday_deco"
               />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Baby Shower Ring Decor
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹1899</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Baby Shower Ring Decor
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹3999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
@@ -558,18 +652,22 @@ export default function BirthdayDeco() {
                 src="/assets/sectionimages/babyshower3.svg"
                 alt="shower_deco"
               />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Baby Shower Arc Decor
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹3999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Baby Shower Arc Decor
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹3999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
@@ -577,18 +675,22 @@ export default function BirthdayDeco() {
                 src="/assets/sectionimages/babyshower4.svg"
                 alt="kids_deco"
               />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Baby Shower Decor
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹1999</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹3699
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Baby Shower Decor
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹1999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -600,7 +702,7 @@ export default function BirthdayDeco() {
             Balloon Hampers
           </h3>
           <Link
-            href="#"
+            href="/view-all"
             className="text-(--pinkd) underline text-[12px] sm:text-sm"
           >
             View All
@@ -613,18 +715,22 @@ export default function BirthdayDeco() {
                 src="/assets/sectionimages/ballon1.svg"
                 alt="aniversary_deco"
               />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Surprise Balloon Bouquet for Wife
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹1699</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
@@ -632,50 +738,62 @@ export default function BirthdayDeco() {
                 src="/assets/sectionimages/ballon2.svg"
                 alt="birthday_deco"
               />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Surprise Balloon Bouquet for Wife
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2699</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/assets/sectionimages/ballon3.svg" alt="shower_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Surprise Balloon Bouquet for Wife
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹2199</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
             <div>
               <img src="/assets/sectionimages/ballon4.svg" alt="kids_deco" />
-              <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-1">
-                Shinny Birthday decors
-              </span>
-              <div className="flex items-center gap-1 mb-1">
-                <span className="text-yellow-400">★ ★ ★ ★ ★</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-bold">₹4399</span>
-                <span className="text-gray-400 line-through text-sm">
-                  ₹4499
-                </span>
-                <span className="text-green-500 text-xs">1% OFF</span>
+              <div className="px-2 py-4">
+                <div className="flex flex-col leading-none">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-medium mb-3">
+                    Surprise Balloon Bouquet for Wife
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-[22px]">₹1999</span>
+                  <span className="text-gray-400 line-through text-sm">
+                    ₹3699
+                  </span>
+                  <span  className="border border-[#93F8C5] rounded-xl sm:rounded-2xl lg:rounded-[20px] px-1.5 py-0.5 sm:px-2 sm:py-1 lg:px-3 text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs font-medium text-[#016136] bg-linear-to-r from-[#91F8C5] to-white inline-flex items-center justify-center whitespace-nowrap">
+                    17% OFF
+                  </span>
+                </div>
               </div>
             </div>
           </div>

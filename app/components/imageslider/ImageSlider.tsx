@@ -21,13 +21,15 @@ const swiperSlides = [...slides, ...slides];
 export default function HeroSlider() {
   return (
     <div className="container max-w-[1250px] mx-auto py-8 px-5">
-      <div className="swiper-container w-full md:[&_.swiper-slide]:flex! md:[&_.swiper-slide]:items-center md:[&_.swiper-slide]:min-h-[400px] md:[&_.swiper-wrapper]:min-h-[450px] md:[&_.swiper-slide-next_img]:absolute md:[&_.swiper-slide-next_img]:left-1/2 md:[&_.swiper-slide-next_img]:-translate-x-1/2 md:[&_.swiper-slide-next_img]:w-[170%] md:[&_.swiper-slide-next_img]:max-w-none md:[&_.swiper-slide-next_img]:z-9 [&_.swiper-slide_img]:transition-[width] [&_.swiper-slide_img]:duration-400 [&_.swiper-slide_img]:ease-in-out">
+      <div
+        className="swiper-container w-full md:[&_.swiper-slide]:flex! md:[&_.swiper-slide]:items-center md:[&_.swiper-slide]:min-h-[400px] md:[&_.swiper-wrapper]:min-h-[450px] md:[&_.swiper-slide-next_img]:absolute md:[&_.swiper-slide-next_img]:left-1/2 md:[&_.swiper-slide-next_img]:-translate-x-1/2 md:[&_.swiper-slide-next_img]:w-[170%] md:[&_.swiper-slide-next_img]:max-w-none md:[&_.swiper-slide-next_img]:z-9 [&_.swiper-slide_img]:transition-[width] [&_.swiper-slide_img]:duration-400 [&_.swiper-slide_img]:ease-in-out"
+      >
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={50}
           slidesPerView={1}
           loop={true}
-          navigation={true}
+          navigation={false}
           pagination={{ clickable: true }}
           effect="coverflow"
           coverflowEffect={{
@@ -42,7 +44,7 @@ export default function HeroSlider() {
               slidesPerView: 1,
             },
             1024: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
             1560: {
               slidesPerView: 3,

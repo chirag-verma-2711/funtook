@@ -98,3 +98,16 @@ body {
 .animate-modal-in {
   animation: modalFadeIn 0.3s forwards;
 }
+html {
+  scroll-behavior: smooth;
+}
+.swiper-pagination-bullet {
+  background-color: #d1d5db; /* gray */
+  opacity: 1;
+}
+@layer components {
+  .swiper-pagination-bullet {
+    @apply bg-gray-300 opacity-100;
+  }
+ 
+}

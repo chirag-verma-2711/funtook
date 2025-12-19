@@ -344,7 +344,18 @@ export default function Header() {
         <div className="border-t border-b border-gray-300 py-3 lg:block hidden">
           {/* Desktop Menu */}
           <div className="hidden sm:flex sm:items-center sm:justify-center space-x-4 *:px-3 *:py-1 *:text-black *:hover:text-(--pinkd) *:transition-all *:ease-in-out">
-            <Link href="#Birthday">Birthday</Link>
+            <Link
+              href="#Birthday"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("Birthday")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
+            >
+              Birthday
+            </Link>
             <Link href="#Anniversary">Anniversary</Link>
             <Link href="#Baby-Welcome">Baby Welcome</Link>
             <Link href="#Other-Categories">Other Categories</Link>

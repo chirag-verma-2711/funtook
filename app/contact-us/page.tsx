@@ -7,19 +7,22 @@ export default function contactus() {
       <div className="flex flex-col md:flex-row gap-10">
         {/* LEFT FORM */}
         <div className="md:w-1/2 w-full p-8 rounded-xl shadow bg-[#F5F5F5]">
-          <h3 className="text-xs sm:text-sm font-medium text-[#FC6E88]">
-            Get In Touch
-          </h3>
-          <h1 className="text-lg sm:text-2xl font-semibold mt-2">
-            Let’s Chat, Reach Out to Us...
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-500 mt-1">
-            Have questions or feedback? We’re here to help.
-          </p>
+          <div>
+            <h3 className="text-xs sm:text-sm font-bold text-[#FC6E88] mb-5">
+              Get In Touch
+            </h3>
+            <h1 className="text-lg sm:text-2xl font-semibold mt-2">
+              Let’s Chat, Reach Out to Us...
+            </h1>
+            <p className="text-xs text-gray-500 mt-1 max-w-[400px]">
+              Have questions or feedback? We’re here to help. Send us a message,
+              and we’ll respond within 24 hours
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <div className="flex flex-col">
-              <p className="text-xs sm:text-sm mb-1">First Name</p>
+              <p className="text-xs mb-1">First Name</p>
               <input
                 type="text"
                 placeholder="First Name"
@@ -27,7 +30,7 @@ export default function contactus() {
               />
             </div>
             <div className="flex flex-col">
-              <p className="text-xs sm:text-sm mb-1">Last Name</p>
+              <p className="text-xs mb-1">Last Name</p>
               <input
                 type="text"
                 placeholder="Last Name"
@@ -37,7 +40,7 @@ export default function contactus() {
           </div>
 
           <div className="flex flex-col mt-3">
-            <p className="text-xs sm:text-sm mb-1">Email</p>
+            <p className="text-xs mb-1">Email</p>
             <input
               type="email"
               placeholder="Email"
@@ -46,7 +49,7 @@ export default function contactus() {
           </div>
 
           <div className="flex flex-col mt-3">
-            <p className="text-xs sm:text-sm mb-1">Message</p>
+            <p className="text-xs mb-1">Message</p>
             <textarea
               placeholder="Leave Message..."
               className="p-3 rounded-md w-full h-32 outline-none bg-[#EDEDED] text-xs sm:text-sm"

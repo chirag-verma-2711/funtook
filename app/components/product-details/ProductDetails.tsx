@@ -51,7 +51,7 @@ export default function Product() {
           setOpenAccordion(openAccordion === 0 ? null : 0)
         }
       >
-        <p className="text-gray-700">
+        <p className="text-gray-700 text-[13px]">
           Bring your space to life with vibrant, colorful decorations that
           sparkle with joy and creativity. From bold balloons and radiant
           lights to elegant drapes and fresh floral accents, every detail adds
@@ -68,7 +68,7 @@ export default function Product() {
           setOpenAccordion(openAccordion === 1 ? null : 1)
         }
       >
-        <ul className="list-disc ml-5 text-gray-700">
+        <ul className="list-disc ml-5 text-[13px]  text-gray-700">
           <li>How do I use this product?</li>
           <li>Does it come with warranty?</li>
           <li>Is it available in different colors?</li>
@@ -82,7 +82,7 @@ export default function Product() {
           setOpenAccordion(openAccordion === 2 ? null : 2)
         }
       >
-        <p className="text-gray-700">
+        <p className="text-gray-700 text-[13px]">
           Standard delivery takes 3–5 business days. Free shipping on orders
           above ₹999.
         </p>
@@ -95,7 +95,7 @@ export default function Product() {
           setOpenAccordion(openAccordion === 3 ? null : 3)
         }
       >
-        <p className="text-gray-700">
+        <p className="text-gray-700 text-[13px]">
           For more information, feel free to reach out to our support team.
         </p>
       </Accordion>
