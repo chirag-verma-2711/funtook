@@ -6,12 +6,12 @@ export default function SocialIcons() {
 
     return (
 
-        <div className="flex flex-col items-center px-4 sm:px-6 md:px-10">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl my-6 text-center">STAY IN TOUCH</h2>
+        <div className="flex flex-col items-center px-4">
+            <h2 className="text-3xl sm:text-4xl my-6 text-center">STAY IN TOUCH</h2>
 
-            <div className="flex flex-col gap-6 sm:gap-8">
+            <div className="w-full max-w-[500px]">
                 {/* Row 1 */}
-                <div className="flex flex-row items-center justify-center gap-8 sm:gap-20">
+                <div className="grid grid-cols-2 items-center justify-center gap-x-15 gap-y-5">
                     <div className="flex items-center gap-2.5">
                         <a
                             href="https://facebook.com"
@@ -35,10 +35,9 @@ export default function SocialIcons() {
                         </a>
                         <h2 className="text-sm sm:text-base font-medium">INSTAGRAM</h2>
                     </div>
-                </div>
+                    {/* </div>
 
-                {/* Row 2 */}
-                <div className="flex flex-row items-center justify-center gap-8 sm:gap-20">
+                    <div className="flex flex-row items-center justify-center gap-8 sm:gap-20"> */}
                     <div className="flex items-center gap-2.5">
                         <a
                             href="https://twitter.com"
